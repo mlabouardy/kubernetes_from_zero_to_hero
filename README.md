@@ -27,7 +27,7 @@ Docker is a phenomenal tool for managing and running one or multiple containers 
   
 ## Kubernetes Architecture
 
-<img src="architecture.png"/>
+<img src="architecture.png" width="50%"/>
 
 Master-Slave design, the user submit the container definition (in YAML or JSON file) to the master through:
 
@@ -43,5 +43,19 @@ The container definition container the image container, constraints, affinity, p
 - Kubernetes Multi-Node Cluster: emulates production environment
 - Google Container Engine
 
+## Kubernetes Terminology
 
+- Nodes: hosts that run kubeneretes applications
+- Containers: Units of packaging
+- Pods: Units of deployment (collection of container)
+- Replication Controller: ensures availability and scalability
+- Labels: Key-Value pairs for identification
+- Services: collection of pods exposed as an endpoint
+
+## List of commands
+
+| Command        | Description  |
+| ------------- |:-------------:|
+| kubectl get nodes      | get list of nodes |
+| kubectl get cs      | components status      |
 
