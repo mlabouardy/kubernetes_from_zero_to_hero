@@ -27,7 +27,7 @@ Docker is a phenomenal tool for managing and running one or multiple containers 
   
 ## Kubernetes Architecture
 
-<img src="images/architecture.png"/>
+<img src="architecture.png"/>
 
 Master-Slave design, the user submit the container definition (in YAML or JSON file) to the master through:
 
