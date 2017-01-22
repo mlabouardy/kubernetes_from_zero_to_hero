@@ -57,5 +57,11 @@ The container definition container the image container, constraints, affinity, p
 | Command        | Description  |
 | ------------- |:-------------:|
 | kubectl get nodes      | get list of nodes |
-| kubectl get cs      | components status      |
+| kubectl get cs      | components health      |
+| kubectl get pods | list of pods |
+| kubectl config use-context "vagrant multi" | switch kube control to another cluster |
+| kubectl expose deployment name --target-port= --type=NodePort | create a service |
+| kubectl get services | get list of services |
+
+
 
