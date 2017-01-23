@@ -63,5 +63,17 @@ The container definition container the image container, constraints, affinity, p
 | kubectl expose deployment name --target-port= --type=NodePort | create a service |
 | kubectl get services | get list of services |
 
+## Kuberentes Master
+
+- apiserver:
+- scheduler:
+- controller-manager:
+
+## Kuberenetes Node
+
+- kubelet: agent to interact with master and report health status to etcd
+- kube-proxy: distributed network
+- docker: linux container engine (see rkt)
+
 
 
