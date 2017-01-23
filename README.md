@@ -95,6 +95,11 @@ An abstraction to define a logical set of Pods. Services are exposed through int
 - Cluster IP: available only in the cluster
 - NodePort: external service
 
+### Replication Controller
+
+Ensures that a Pod or set of Pods are always up and available, it always maintains desired number of Pods
+
+
 ## Deploy a 3-tier application
 
 
