@@ -71,9 +71,30 @@ The container definition container the image container, constraints, affinity, p
 
 ## Kuberenetes Node
 
-- kubelet: agent to interact with master and report health status to etcd
+- kubelet: agent to interact with master and report health status & metrics to etcd
 - kube-proxy: distributed network
 - docker: linux container engine (see rkt)
 
+### POD
+
+- Group of one or more containers that are always co-located, co-scheduled and run in a shared context
+- Each pod is isolated by:
+  - process id namespace
+  - network namespace
+  - interprocess communication namespace
+  - unix time sharing (uts) namespace
+  
+### Labels & Selectors
+
+Assign meta-data
+
+### Services
+
+An abstraction to define a logical set of Pods. Services are exposed through internal and external endpoints
+
+- Cluster IP: available only in the cluster
+- NodePort: external service
+
+## Deploy a 3-tier application
 
 
