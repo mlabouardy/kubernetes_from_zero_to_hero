@@ -108,3 +108,95 @@ Ensures that a Pod or set of Pods are always up and available, it always maintai
 - Service is kind of a proxy, with a fixed virtual ip address
 - Each component deployed as a pod
 - We use services for component communication
+
+
+_________
+
+- K8S: schedules, run and manage containers on a cluster of virtual or physical machines
+
+- Pods:
+smallest deployable unit
+small group of tighty coupled containers
+shared network and data volumes
+routable IP address
+mortal
+
+- ReplicaSets:
+run x copies (replicas) of a pod
+start or kill pods if necessary
+handle pod failures (health check)
+
+- Deployments
+contains declaration of your application:
+  image
+  env variables
+  data volumes
+define number of replicas
+creates ReplicaSet, which in turn create Pods
+
+- Services
+provide a permanent virtual IP and DNS name
+proxy traffic to selected pods
+simple load balancing including session affinity
+
+- Ingress
+expose services to the outside world
+map URLs to services
+SSL termination
+needs ingress provider
+
+- Namespaces
+group kubernetes resources
+by default everything is in the default namespace
+create namespace for you env (test, staging, production)
+restrict access to specific namespaces for k8s users
+namespaces can have separated networks
+
+- Clusters
+a cluster is a set of virtual or physical machines (nodes) running a k8s master and one or more k8s worker nodes
+cluster federation:
+  run a federation master, which knows all your clusters
+  run your apps distributed across clusters, across amazon/google/...regions
+  
+- Secrets & ConfigMaps
+seperate your application code and configuration
+both Secrets & ConfigMaps are key-value-pairs
+use Secrets for binary values (certificates, keys)
+use ConfigMaps for string values
+both can be read by the container via env variables or mapped into a data volume
+
+- Data Volumes
+map directories into containers
+multiple containers in one pod share the same volumes
+many volume types: host directory, empty directory, google persistent disk, amazon blob store, nfs, rdb, git, cephs ..
+
+- PetSets
+a Pet is a stateful pod
+a PetSet has a scalable number of Pets
+a Pet is bound to a dynamically created data volume
+that data volume will never be deleted automatically
+the Pet is bound to the same volume on a restart
+
+- Jobs
+sometimes you need to run short living tasks
+a job ensures that a container which executes such a task runs successfuly exactly once
+retry on failure
+ScheduledJobs can be started a specific times (like cron)
+
+- DaemonSets
+run pods on all (or a selected set of) nodes in the cluster
+useful for running containers for logging and monitoring
+
+- Autoscaling
+Horizonal Pod autoscaling: scales replicasets 
+Cluster Autoscaling: scale the number of nodes
+
+- API
+command line tool "kubectl"
+easy intergration in your existing workflow
+
+
+
+
+
+
