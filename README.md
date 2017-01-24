@@ -103,3 +103,8 @@ Ensures that a Pod or set of Pods are always up and available, it always maintai
 ## Deploy a 3-tier application
 
 
+
+- Each pod gets a virtual IP (dynamic ip address)
+- Service is kind of a proxy, with a fixed virtual ip address
+- Each component deployed as a pod
+- We use services for component communication
