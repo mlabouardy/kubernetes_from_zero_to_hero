@@ -196,7 +196,16 @@ command line tool "kubectl"
 easy intergration in your existing workflow
 
 
+- Replication Controller's Selector matches the Pods based on Labels
 
 
+### Service Discovery
+
+- SD through Env variables
+- SD through DNS
+- Service Types:
+  - Cluster IP
+  - NodePort
+  - LoadBalancer
 
 
